@@ -32,9 +32,12 @@ class Parser:
 
     # function to parse the entire program
     def parse(self):
-        
+        self.advance()
+        return self.program()
+
     # move to the next token.
     def advance(self):
+        self.current_token = self.lexer.get_token()
 
     # parse the one or multiple statements
     def program(self):
